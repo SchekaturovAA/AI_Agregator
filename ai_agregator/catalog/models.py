@@ -111,6 +111,7 @@ class Rating(models.Model):
         verbose_name_plural = "Оценки"
         unique_together = ['user', 'service']  # Один пользователь - одна оценка на сервис
 
+
     def __str__(self):
         return f"{self.user.username} - {self.service.name} - {self.score}"
 
